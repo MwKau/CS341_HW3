@@ -1,0 +1,90 @@
+<!-- Zhi Chen -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheesecake</title>
+    <meta charset="UTF-8">
+
+    <!-- Link to css -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load jquery -->
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascripts/script.js"></script>
+</head>
+    <body>
+        <!-- Title text at top -->
+        <h1>Cheesecake Order Form</h1>
+
+        <!-- Cheesecake image -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg">
+
+        <div id="order_form"> 
+            <!-- Quantity Topping -->
+            <p>Quantity Topping</p>
+
+            <!-- Section to select topping inline -->
+            <div style="padding: 15px; background-color: #eb4034; width: 50px; display: inline-block;">
+                <!-- Dropdown Menu -->
+                <form>  
+                    <select id="topping_quantity">  
+                        <option value = "1"> 1</option>  
+                        <option value = "2"> 2</option>  
+                        <option value = "3"> 3</option>  
+                        <option value = "500"> 500 </option>  
+                    </select>  
+                </form>
+            </div>
+
+            <div id="topping_type_button" style="padding: 15px; background-color: #dbca6b; display: inline-block;">
+                <!-- Radio Buttons -->
+                <label><input type="radio" name="topping" value="cherry">Cherry</label><br>
+                <label><input type="radio" name="topping" value="plain">Plain</label><br>
+                <label><input type="radio" name="topping" value="chocolate">Chocolate</label>
+            </div>
+
+            <!-- Add notes box -->
+            <p>Notes:</p>
+            <form action="/action_page.php">
+                <textarea id="custom_instructions" placeholder="Enter any special instructions here."></textarea>
+            </form>
+            <button id="sumbit_order">Order</button>
+        </div>
+
+        <!-- Result of ordering -->
+        <div id="order_result" style="display:none">
+            <h1>Thank you! Your order has been placed</h1>
+            <p id="returned_topping"></p>
+            <p id="returned_quantity"></p>
+            <p id="returned_notes"></p>
+        </div>
+
+        <!-- Display totals -->
+        <p><strong>Total Orders for</strong></p>
+        <!-- https://www.w3schools.com/howto/howto_css_dropdown.asp -->
+        <div id="month_dropdown" onclick="updateDropdown()" class="dropdown">
+            <button id="month_dropdown_current" class="dropbtn">Jan</button>
+            <select id="month_dropdown_list" class="dropdown-content">
+              <option value="Jan" selected="selected">Jan</option>
+              <option value="Feb">Feb</option>
+              <option value="Mar">Mar</option>
+              <option value="Apr">Apr</option>
+              <option value="May">May</option>
+              <option value="Jun">Jun</option>
+              <option value="Jul">Jul</option>
+              <option value="Aug">Aug</option>
+              <option value="Sep">Sep</option>
+              <option value="Oct">Oct</option>
+              <option value="Nov">Nov</option>
+              <option value="Dec">Dec</option>
+            </select>
+          </div>
+        <ul>
+            <li>11 Cherry</li>
+            <li>17 Chocolate</li>
+            <li>31 Plain</li>
+          </ul>
+    </body>
+</html>
