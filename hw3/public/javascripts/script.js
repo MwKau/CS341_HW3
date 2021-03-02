@@ -8,6 +8,13 @@ $(document).ready(function(){
         var month = e.options[e.selectedIndex].text;
         $("#month_dropdown_current").text(month);
 
+        
+        // Recieve object response
+        var toppingData = $.post('/orders');
+
+        $("#cherry_history").text(String(toppingData[0].quantity) + "Cherry");
+        $("#plain_history").text(String(toppingData[1].quantity) + "Plain");
+        $("#chocolate_history").text(String(toppingData[2].quantity) + "Chocolate");
     });
 
 
