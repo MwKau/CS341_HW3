@@ -15,7 +15,7 @@ router.post('/', function(req, res, next) {
     var stringToppingData = JSON.stringify(toppingData);
 
     // Send data
-    res.send(stringToppingData);
+    res.json(stringToppingData);
 });
 
 module.exports = router;
