@@ -66,7 +66,7 @@
      // waterfall cleanup function
      function (err, res) {
          if (err) {
-             console.log("Database query failed. :( ");
+             console.log("Database query failed. :(");
              console.log(err);
              callback(err, null);
          } else {

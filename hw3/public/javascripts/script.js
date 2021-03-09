@@ -36,6 +36,16 @@ $(document).ready(function(){
             $("#returned_topping").text("Your topping: " + topping);
             $("#returned_quantity").text("Your quantity: " + quantity);
             $("#returned_notes").text("Your notes: " + orderText);
+
+            // Send data to orders to add to db
+            var data = {
+                topping: topping,
+                quantity: quantity,
+                orderText: orderText
+            };
+
+
+            $.post('/newOrder', data);
         }
 
     });
